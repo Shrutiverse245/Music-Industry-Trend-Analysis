@@ -26,7 +26,7 @@ st.title("🎵 Music Industry Trends")
 st.write("Explore insights on popular music based on YouTube views, likes, comments, and streaming data.")
 
 # ---- Sidebar: Filters for User Interaction ----
-st.sidebar.header("🎤 Filter Options")
+st.sidebar.header("Filter Options")
 
 # Artist Selection Dropdown
 artist_list = ["All"] + sorted(df["Artist"].unique().tolist())
@@ -86,7 +86,7 @@ fig2 = px.bar(
 st.plotly_chart(fig2, use_container_width=True)
 
 # ---- Visualization: Streams Percentage (Pie Chart) ----
-st.subheader("🍰 Streams Distribution by Artist")
+st.subheader(" Streams Distribution by Artist")
 
 pie_data = df.groupby("Artist")["Stream"].sum().nlargest(5)  # Top 5 Artists
 fig3 = px.pie(
